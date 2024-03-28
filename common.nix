@@ -7,15 +7,12 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "nixos";
   
-  # Enable networking
   networking.networkmanager.enable = true;
-
-  # Set your time zone.
+	
   time.timeZone = "Europe/London";
 
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
 
   i18n.extraLocaleSettings = {
