@@ -6,15 +6,25 @@
   };
 
   outputs = { self, nixpkgs }:
-    let
-      system = "x86_64-linux";
-    in
     {
-      nixosConfigurations.myNixos = nixpkgs.lib.nixosSystem {
-        inherit system;
+      nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
       
         modules = [
-          ./nixos/configuration.nix
+          ./desktop/hardware-configuration.nix
+          ./desktop/nvidia-configuration.nix
+          ./common.nix
+          ./cachix.nix
+        ];
+      };
+
+      nixosConfigurations.chromebook = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+      
+        modules = [
+          ./chromebook/hardware-configuration.nix
+          ./common.nix
+          ./cachix.nix
         ];
       };
     };

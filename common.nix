@@ -1,15 +1,6 @@
 { config, pkgs, lib, ... }:
 
 {
-  imports =
-    [
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./cachix.nix
-    ] 
-    ## Disable if you don't have a nvidia card
-    ++ lib.optional true ./nvidia-configurations.nix;
-
   nix.settings.trusted-users = [ "root" "robbieb" ];
 
   # Bootloader.
