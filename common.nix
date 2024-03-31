@@ -10,7 +10,7 @@
   networking.hostName = "nixos";
   
   networking.networkmanager.enable = true;
-	
+
   time.timeZone = "Europe/London";
 
   i18n.defaultLocale = "en_GB.UTF-8";
@@ -121,6 +121,7 @@
     tmux
     nixpkgs-review
     gparted
+    google-chrome
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
