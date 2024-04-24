@@ -27,6 +27,11 @@
     LC_TIME = "en_GB.UTF-8";
   };
 
+  # Disable if Nix-index integration is preferred
+  programs.command-not-found.enable = false; 
+  programs.nix-index.enableBashIntegration = true;
+  programs.nix-index.enableZshIntegration = true;
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
@@ -100,6 +105,7 @@
       zotero
       ranger
       whatsapp-for-linux
+      nixpkgs-fmt
     ];
   };
 
@@ -108,6 +114,7 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+
   environment.systemPackages = with pkgs; [
     vim
     git
