@@ -109,6 +109,15 @@
     ];
   };
 
+  services.earth-view = {
+    enable = true;
+    interval = "1h";
+    imageDirectory = ".earth-view";
+    display = "fill";
+    enableXinerama = true;
+  };
+
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
