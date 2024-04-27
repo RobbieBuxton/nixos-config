@@ -6,11 +6,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1714239302,
-        "narHash": "sha256-dItjI++j3b1IcXOvB1/++bnkiPNr15idzw1otJsQldc=",
+        "lastModified": 1714251394,
+        "narHash": "sha256-YGPFTLvkunthKcvq5L7IfslZZtQJtNskjnFb6zQEPl4=",
         "owner": "nicolas-goudry",
         "repo": "earth-view",
-        "rev": "d71e6deecc840925e0970ce287f580d024ee3ea3",
+        "rev": "0b502b384ebc5d886d6d6b06b1c1cf5453d8e0a4",
         "type": "github"
       },
       "original": {
