@@ -106,6 +106,7 @@
       ranger
       whatsapp-for-linux
       nixpkgs-fmt
+			ollama
     ];
   };
 

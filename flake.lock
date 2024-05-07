@@ -62,6 +62,22 @@
         "type": "github"
       }
     },
+    "nixos-hardware": {
+      "locked": {
+        "lastModified": 1715105728,
+        "narHash": "sha256-+B9YXY4jGd/uLfrSMs3xnA/C/A8yfUqRrh+ZSlCMahM=",
+        "owner": "RobbieBuxton",
+        "repo": "nixos-hardware",
+        "rev": "cbff5de0f1004ac781d8e0e579a01656326f23fc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "RobbieBuxton",
+        "ref": "master",
+        "repo": "nixos-hardware",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1713895582,
@@ -130,6 +146,7 @@
       "inputs": {
         "earth-view": "earth-view",
         "nix-index-database": "nix-index-database",
+        "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_2"
       }
     }
