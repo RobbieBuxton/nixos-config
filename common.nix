@@ -37,10 +37,10 @@
 
   # Enable the KDE Plasma Desktop Environment.
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  services.xserver.displayManager.sddm.enable = true;
+  services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
-  services.xserver.displayManager.sddm.wayland.enable = true;
-  services.xserver.displayManager.defaultSession = "plasma";
+  services.displayManager.sddm.wayland.enable = true;
+  services.displayManager.defaultSession = "plasma";
 
   environment.plasma5.excludePackages = with pkgs.libsForQt5; [
     plasma-browser-integration
@@ -91,6 +91,13 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+  };
+
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.robbieb = {
     isNormalUser = true;
@@ -107,6 +114,9 @@
       whatsapp-for-linux
       nixpkgs-fmt
 			ollama
+      deluge
+      zed-editor
+      vlc
     ];
   };
 

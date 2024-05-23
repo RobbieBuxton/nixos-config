@@ -35,6 +35,7 @@
         modules = [
           nixos-hardware.nixosModules.lenovo-ideapad-5-chromebook
           ./chromebook/hardware-configuration.nix
+          ./chromebook/battery.nix
         ] ++ standard-modules;
       };
     };
